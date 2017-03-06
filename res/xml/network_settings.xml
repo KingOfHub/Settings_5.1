@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+         android:title="@string/network_settings" >
+     
+         <PreferenceScreen
+             android:fragment="com.android.settings.wifi.WifiSettings"
+             android:key="wifi_disabled"
+             android:title="@string/wifi_settings_title" />
+     
+         <PreferenceScreen
+             android:key="wifi_disabled"
+             android:title="@string/data_usage_enable_mobile" >
+             <intent
+                 android:action="android.intent.action.MAIN"
+                 android:targetClass="com.android.phone.MobileNetworkSettings"
+                 android:targetPackage="com.android.phone" />
+         </PreferenceScreen>
+    
+</PreferenceScreen>
